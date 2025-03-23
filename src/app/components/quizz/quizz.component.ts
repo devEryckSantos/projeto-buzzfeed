@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import quizz_questions from "../../../assets/data/quizz_questions.json";
 
 @Component({
   selector: 'app-quizz',
@@ -7,22 +8,51 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './quizz.component.html',
   styleUrl: './quizz.component.css'
 })
-export class QuizzComponent  implements OnInit{
- 
+export class QuizzComponent implements OnInit {
+
   title: string = ''
 
-  questios: any
+  questions: any
   questionSelected: any
 
-  answer: string[] = []
+  answers: string[] = []
   answerSelected: string = ""
-  
+
   questionIndex: number = 0
   quesitonMaxIndex: number = 0
 
-  finished:boolean = false
+  finished: boolean = false
 
   constructor() { }
 
-  ngOnInit(): void {  }
+  ngOnInit(): void {
+    if (quizz_questions) {
+      this.finished = false
+      this.title = quizz_questions.title
+
+      this.questions = quizz_questions.questions
+      this.questionSelected = this.questions[this.questionIndex]
+
+      this.questionIndex = 0
+      this.quesitonMaxIndex = this.questions.length
+
+      console.log(this.questionIndex)
+      console.log(this.quesitonMaxIndex)
+    }
+  }
+
+  playesChoose(value: string) {
+    this.answers.push(value)
+    console.log(this.answers)
+  }
+
+  async nextStep() {
+    this.questionIndex += 1
+
+    if (this.quesitonMaxIndex > this.questionIndex) {
+      this.questionSelected = this.questions[this.questionIndex]
+    } else {
+      this.finished = true
+    }
+  }
 }
