@@ -1,5 +1,5 @@
 {
-    "title":"Você seria um super heroi ou um temível vilão ?",
+    "title":"Você seria um super heroi, um temível vilão ou apenas um despreocupado anti-héroi ?",
     "questions":[
       {
         "id":1,
@@ -9,7 +9,7 @@
           {"id": 2, "name":"Voar", "alias":"B"},
           {"id": 3, "name":"Explodir coisas", "alias":"A"},
           {"id": 4, "name":"Curar feridas", "alias":"B"},
-          {"id": 5, "name":"Soltar fogo pelas mãos", "alias":"A"}
+          {"id": 5, "name":"Soltar fogo pelas mãos", "alias":"C"}
         ]
       },
       {
@@ -18,7 +18,8 @@
         "options":[
           {"id": 1, "name":"Crianças", "alias":"A"},
           {"id": 2, "name":"Idosos", "alias":"A"},
-          {"id": 3, "name":"Não saberia escolher", "alias":"B"}
+          {"id": 3, "name":"Seus mais próximos", "alias":"C"},
+          {"id": 4, "name":"Não saberia escolher", "alias":"B"}
         ]
       },
       {
@@ -26,7 +27,7 @@
         "question": "Qual a sua maior preocupação ao enfretar outro super ser ?",
         "options":[
           {"id": 1, "name":"Não destruir prédios", "alias":"B"},
-          {"id": 2, "name":"Socar a cara do inimigo", "alias":"A"},
+          {"id": 2, "name":"Socar a cara do inimigo", "alias":"C"},
           {"id": 3, "name":"Não sujar meu traje", "alias":"A"},
           {"id": 4, "name":"Não deixar ninguém se ferir", "alias":"B"}
         ]
@@ -36,20 +37,24 @@
         "question": "Qual o seu maior foco ?",
         "options":[
           {"id": 1, "name":"Ficar rico com poderes", "alias":"A"},
-          {"id": 2, "name":"Salvar a cidade", "alias":"B"}
+          {"id": 2, "name":"Salvar a cidade", "alias":"B"},
+          {"id": 3, "name":"Proteger apenas quem você ama", "alias":"C"}
         ]
       },
       {
         "id":5,
-        "question": "Qual o seu apelido de super ser  ?",
+        "question": "Qual o seu apelido de super ser ?",
         "options":[
           {"id": 1, "name":"O Terrivel", "alias":"A"},
-          {"id": 2, "name":"Amigo da vizinhança", "alias":"B"}
+          {"id": 2, "name":"Amigo da vizinhança", "alias":"B"},
+          {"id": 3, "name":"O imponente", "alias":"A"},
+          {"id": 4, "name":"Não teria", "alias":"C"}
         ]
       }
     ],
     "results":{
-      "A": "Você muito provavelmente seria um super vilão!",
-      "B": "Você muito provavelmente seria um super Herói!"
+      "A": "Você muito provavelmente seria um temível vilão!",
+      "B": "Você muito provavelmente seria um super Herói!",
+      "C": "Você muito provavelmente seria um Anti-herói!"
     }
   }
